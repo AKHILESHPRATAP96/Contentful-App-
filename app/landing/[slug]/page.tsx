@@ -11,11 +11,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const page = entries.items[0];
   const layoutConfig = page?.fields.layoutConfig;
 
+  console.log('page==>',entries)
   return (
     <main>
       <nav>
-        <Link href="/landing/page-1">Page 1</Link> |{" "}
-        <Link href="/landing/page-2">Page 2</Link>
+        <Link href="/landing/page1">Page 1</Link> |{" "}
+        <Link href="/landing/page1">Page 2</Link>|{" "}
       </nav>
       <h1>{page?.fields?.title as string}</h1>
       <pre>{JSON.stringify(layoutConfig, null, 2)}</pre>
