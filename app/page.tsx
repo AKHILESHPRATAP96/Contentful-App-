@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <nav className={styles.nav} style={{display:"flex",gap:10}}>
+    
         <Link href="/landing/page1" className={styles.link}>
           Page 1
         </Link>
@@ -12,7 +12,7 @@ export default function Home() {
         <Link href="/landing/page1" className={styles.link}>
           Page 2
         </Link>
-      </nav>
+    
 
       <section className={styles.intro}>
         <h1>Welcome to the Landing Pages Demo</h1>

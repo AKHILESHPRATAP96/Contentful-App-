@@ -1,3 +1,4 @@
+
 import styles from "@/styles/HeroBlock.module.css";
 import Image from "next/image";
 
