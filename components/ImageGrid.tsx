@@ -1,10 +1,23 @@
 import styles from "@/styles/ImageGrid.module.css";
 import Image from "next/image";
 
-export default function ImageGrid({ imagesCollection }: any) {
+type ImageGridProps = {
+  imagesCollection: {
+    items: {
+      url: string;
+      description: string;
+    }[];
+  };
+};
+
+export default function ImageGrid({ imagesCollection }: ImageGridProps) {
+  if (!imagesCollection || !imagesCollection.items || imagesCollection.items.length === 0) {
+    return null;
+  }
+
   return (
     <section className={styles.grid}>
-      {imagesCollection.items.map((img: any, idx: any) => (
+      {imagesCollection.items.map((img, idx) => (
         <Image
           key={idx}
           src={img.url}

@@ -1,7 +1,22 @@
 import styles from "@/styles/HeroBlock.module.css";
 import Image from "next/image";
 
-export default function HeroBlock({ heading, subtitle, cta, backgroundImage }: any) {
+type HeroBlockProps = {
+  heading: string;
+  subtitle: string;
+  cta: string;
+  backgroundImage: {
+    url: string;
+    description: string;
+  };
+};
+
+export default function HeroBlock({
+  heading,
+  subtitle,
+  cta,
+  backgroundImage,
+}: HeroBlockProps) {
   return (
     <section className={styles.hero}>
       <Image
